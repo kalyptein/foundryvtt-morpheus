@@ -1,0 +1,33 @@
+{
+  "name": "morpheus",
+  "version": "0.0.1",
+  "description": "A baseline Foundry VTT system for customizing.",
+  "author": "Demiurge Worldbuilding Unlimited",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalyptein/foundryvtt-morpheus.git"
+  },
+
+  "engines": {
+    "node": ">=18"
+  },
+
+  "homepage": "https://github.com/kalyptein/foundryvtt-morpheus#readme",
+  "bugs": {
+    "url": "https://github.com/kalyptein/foundryvtt-morpheus/issues"
+  },
+
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.5"
+  }
+}

@@ -9,6 +9,20 @@ A baseline Foundry VTT system for customizing.
 
 ## Features
 
+base actor
+* name
+* properties (key-value pairs, with a metadata-type for categorization)
+* description
+
+base item
+* name
+* container (what contains it)
+* contains (what does it contain)
+* properties (key-value pairs, with a metadata-type for categorization)
+* description
+
+activeeffects
+* 
 
 
 # License

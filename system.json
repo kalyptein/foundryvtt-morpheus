@@ -1,0 +1,53 @@
+{
+	"id": "morpheus",
+	"title": "Morpheus Generic RPG",
+	"description": "A baseline Foundry VTT system for customizing.",
+	"version": "0.0.1",
+	"compatibility": {
+		"minimum": "13",
+		"verified": "13"
+	},
+
+	"authors": [
+		{
+			"name": "Demiurge Worldbuilding Unlimited"
+		}
+	],
+	"esmodules": [
+		"morpheus.mjs"
+	],
+	"styles": [
+		"styles/morpheus.css"
+	],
+
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+
+	"packs": [
+	],
+
+	"documentTypes": {
+		"Actor": {
+			"actor": {}
+		},
+		"Item": {
+			"item": {}
+		}
+	},
+
+	"url": "https://github.com/kalyptein/foundryvtt-morpheus",
+	"manifest": "https://github.com/kalyptein/foundryvtt-morpheus/releases/latest/download/system.json",
+	"download": "https://github.com/kalyptein/foundryvtt-morpheus/releases/download/release-0.1.0/morpheus.zip",
+
+	"grid": {
+		"distance": 5,
+		"units": "ft"
+	},
+
+	"background": "systems/morpheus/assets/artwork/GM_Screen_Final_Drawing_Elongated.webp"
+}
