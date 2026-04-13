@@ -1,0 +1,45 @@
+{
+	"Actor": {
+		"types": [
+			"Actor"
+		],
+
+		"templates": {
+			"baseActor": {
+				"description": "",
+				"barProperty": {
+					"value": [ "", "", "" ],
+					"max": [ "", "", "" ]
+				},
+				"barVal1": 1,
+				"barMax1": 1,
+				"barVal2": 1,
+				"barMax2": 1,
+				"barVal3": 1,
+				"barMax3": 1
+			}
+		},
+
+		"Actor": {
+			"templates": ["baseActor"]
+		}
+	},
+
+	"Item": {
+		"types": [
+			"Item"
+		],
+
+		"templates": {
+			"baseItem": {
+				"description": "",
+				"parent": null,
+				"contents": []
+			}
+		},
+
+		"Item": {
+			"templates": ["baseItem"]
+		}
+	}
+}

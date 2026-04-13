@@ -11,18 +11,30 @@ A baseline Foundry VTT system for customizing.
 
 base actor
 * name
-* properties (key-value pairs, with a metadata-type for categorization)
+* properties (key-value pairs, with a metadata-type for categorization, and a description)
 * description
+* bar1/bar1max, bar2/bar2max, and bar3/bar3max; set the properties to use for each resource bar, updated when changed
+* should the actor have a "lock" boolean to prevent alteration?
 
 base item
 * name
-* container (what contains it)
+* container (what contains it; max depth 10, ensure no looping)
 * contains (what does it contain)
 * properties (key-value pairs, with a metadata-type for categorization)
 * description
+* should the item have a "lock" boolean to prevent alteration?
 
 activeeffects
-* 
+* enabled flag that can be toggled
+* parent (actor or item)
+* property list
+* description
+* should the effect have a "lock" boolean to prevent alteration?
+
+
+* can have a party/group actor, with actors tied to it
+* it can have an inventory, which can either be independent of the characters (like a treasury or faction supply) or made up of inventory space "donated" by members (to simplify a party inventory of rations, torches, etc)
+
 
 
 # License

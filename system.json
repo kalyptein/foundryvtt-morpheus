@@ -31,15 +31,6 @@
 	"packs": [
 	],
 
-	"documentTypes": {
-		"Actor": {
-			"actor": {}
-		},
-		"Item": {
-			"item": {}
-		}
-	},
-
 	"url": "https://github.com/kalyptein/foundryvtt-morpheus",
 	"manifest": "https://github.com/kalyptein/foundryvtt-morpheus/releases/latest/download/system.json",
 	"download": "https://github.com/kalyptein/foundryvtt-morpheus/releases/download/release-0.1.0/morpheus.zip",
