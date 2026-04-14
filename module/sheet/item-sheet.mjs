@@ -1,4 +1,4 @@
-export class MorpheusItemSheet extends ItemSheet {
+export class MorpheusItemSheet extends foundry.appv1.sheets.ItemSheet {
 
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {

@@ -1,4 +1,4 @@
-export class MorpheusActorSheet extends ActorSheet {
+export class MorpheusActorSheet extends foundry.appv1.sheets.ActorSheet {
 
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {

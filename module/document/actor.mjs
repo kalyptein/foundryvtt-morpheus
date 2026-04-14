@@ -6,9 +6,8 @@ export class MorpheusActor extends Actor {
     data.prototypeToken = data.prototypeToken || {
       actorLink: false,
       displayBars: CONST.TOKEN_DISPLAY_MODES.ALWAYS,
-      bar1: { attribute: "barVal1" },
-      bar2: { attribute: "barVal2" },
-      bar3: { attribute: "barVal3" }
+      bar1: { attribute: "bar1" },
+      bar2: { attribute: "bar2" },
     };
 
     return super.create(data, options);
@@ -48,15 +47,8 @@ export class MorpheusActor extends Actor {
     const properties = items.filter((i) => i.type === "Property");
 
     // Set bar values
-    let bar = this._setBarValues(properties, 0);
-    system.barVal1 = bar[0];
-    system.barMax1 = bar[1];
-    bar = this._setBarValues(properties, 1);
-    system.barVal2 = bar[0];
-    system.barMax2 = bar[1];
-    bar = this._setBarValues(properties, 2);
-    system.barVal3 = bar[0];
-    system.barMax3 = bar[1];
+    this._setBarValues(properties, 0, system.bar1);
+    this._setBarValues(properties, 1, system.bar2);
   }
 
   /** @override */
@@ -66,21 +58,20 @@ export class MorpheusActor extends Actor {
     return data;
   }
 
-  _setBarValues(props, i)
+  _setBarValues(props, i, barProp)
   {
-    let result = [null, null];
+    barProp.value = null;
+    barProp.max = null;
     const valName = this.system.barProperty.value[i]
     const maxName = this.system.barProperty.max[i]
-    const barProp = props.find(p => p.name === valName)
-    if (barProp) {
-      result[0] = barProp.system.value;
+    const barPropVal = props.find(p => p.name === valName)
+    if (barPropVal) {
+      barProp.value = barPropVal.system.value;
 
       const barPropMax = props.find(p => p.name === maxName)
       if (barPropMax) {
-        result[1] = barPropMax.system.value;
+        barProp.max = barPropMax.system.value;
       }
     }
-
-    return result;
   }
 }
