@@ -27,19 +27,27 @@
 
 	"Item": {
 		"types": [
-			"Item"
+			"Item", "Property"
 		],
 
 		"templates": {
 			"baseItem": {
 				"description": "",
 				"parent": null,
-				"contents": []
+				"contents": [],
+				"expanded": false,
+				"tags": []
 			}
 		},
 
 		"Item": {
 			"templates": ["baseItem"]
+		},
+
+		"Property": {
+			"templates": ["baseItem"],
+			"dataType": "string",
+			"value": ""
 		}
 	}
 }

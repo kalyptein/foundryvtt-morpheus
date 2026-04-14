@@ -36,6 +36,9 @@ activeeffects
 * it can have an inventory, which can either be independent of the characters (like a treasury or faction supply) or made up of inventory space "donated" by members (to simplify a party inventory of rations, torches, etc)
 
 
+properties
+* dataType: string | number | array | group
+
 
 # License
 
