@@ -8,8 +8,8 @@
 			"baseActor": {
 				"description": "",
 				"barProperty": {
-					"value": [ "", "", "" ],
-					"max": [ "", "", "" ]
+					"value": [ "", "" ],
+					"max": [ "", "" ]
 				},
 				"bar1": {
 					"value": 0,

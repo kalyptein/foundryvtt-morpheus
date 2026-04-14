@@ -1,12 +1,42 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{cssClass}} flexcol" autocomplete="off">
+	<header class="morpheus-header flex0">
+		<img
+			class="portrait"
+			src="{{ actor.img }}"
+			data-edit="img"
+			data-tooltip="{{ actor.name }}"
+			height="110"
+			width="110"
+		/>
+		<div class="morpheus-title">
+			<input
+				name="name"
+				type="text"
+				value="{{ actor.name }}"
+				placeholder="Guy d'Character"
+			/>
+		</div>
+	</header>
 
-<h1>{{actor.name}}</h1>
+	<nav class="morpheus-nav flex0" data-group="primary">
 
-<div class="resource">
-  <label>HP</label>
-  <input type="number" name="system.attributes.hp.value" value="{{system.attributes.hp.value}}">
-  /
-  <span>{{system.attributes.hp.max}}</span>
-</div>
+		<a class="navigation-tab" data-tab="tab-inventory">
+      Inventory
+		</a>
 
+		<a class="navigation-tab" data-tab="tab-properties">
+      Properties
+		</a>
+
+		<a class="navigation-tab" data-tab="tab-notes">
+      Notes
+		</a>
+
+	</nav>
+
+	<section class="morpheus-content-body flex1">
+		{{> actor/inventory }}
+		{{> actor/properties }}
+		{{> actor/notes }}
+	</section>
 </form>

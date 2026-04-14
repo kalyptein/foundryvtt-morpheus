@@ -1,3 +1,4 @@
+import loadTemplates from "./module/templates.mjs";
 import { MorpheusActor } from "./module/document/actor.mjs";
 import { MorpheusItem } from "./module/document/item.mjs";
 
@@ -17,6 +18,7 @@ Hooks.once("init", () => {
   CONFIG.Actor.documentClass = MorpheusActor;
   CONFIG.Item.documentClass = MorpheusItem;
 
+  loadTemplates();
   
   foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
   foundry.documents.collections.Actors.registerSheet("morpheus", MorpheusActorSheet, { makeDefault: true });

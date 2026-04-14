@@ -19,11 +19,11 @@ export class MorpheusActorSheet extends foundry.appv1.sheets.ActorSheet {
     context.system = this.actor.system;
 
     // Get properties
-    const properties = items.filter((i) => i.type === "Property");
+    const properties = this.actor.items.filter((i) => i.type === "Property");
     const propTops = properties.filter((i) => i.system.parent === "");
 
     // Get inventory
-    const inv = items.filter((i) => i.type === "Item");
+    const inv = this.actor.items.filter((i) => i.type === "Item");
     const invTops = inv.filter((i) => i.system.parent === "");
 
     return context;
