@@ -6,7 +6,7 @@
 
 		"templates": {
 			"baseActor": {
-				"description": "",
+				"notes": "",
 				"barProperty": {
 					"value": [ "", "" ],
 					"max": [ "", "" ]
@@ -34,7 +34,7 @@
 
 		"templates": {
 			"baseItem": {
-				"description": "",
+				"notes": "",
 				"parent": null,
 				"contents": [],
 				"expanded": false,
